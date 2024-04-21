@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #dddddd; /* Thay đổi màu nền của thanh menu */
+            text-align: center; /* Căn giữa các mục menu */
+        }
+
+        nav ul li {
+            display: inline-block;
+            position: relative; /* Thêm vị trí tương đối để menu con có thể được định vị tuyệt đối đối với menu cha */
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 10px 20px;
+            color: #003399; /* Màu chữ mặc định cho các mục menu chính */
+            text-decoration: none;
+            letter-spacing: 2px; /* Điều chỉnh khoảng cách giữa các ký tự */
+            font-weight: bold; /* In đậm chữ */
+            font-family: Arial, sans-serif; /* Thay đổi font chữ */
+        }
+
+        nav ul li:hover > a {
+            color: #f00; /* Thay đổi màu chữ khi rê chuột vào */
+        }
+
+        nav ul li:hover > ul {
+            display: block;
+        }
+
+        nav ul ul {
+            display: none;
+            position: absolute;
+            background-color: #fff; /* Thay đổi màu nền của submenu */
+            text-align: left; /* Căn trái các mục trong submenu */
+            border: 1px solid #ccc; /* Thêm khung cho submenu */
+            border-top: none; /* Loại bỏ khung trên của submenu */
+        }
+
+        nav ul ul li {
+            display: block;
+        }
+
+        nav ul ul li a {
+            padding: 10px 30px;
+            color: #000; /* Thay đổi màu chữ của các mục trong submenu */
+            letter-spacing: 1px; /* Điều chỉnh khoảng cách giữa các ký tự */
+        }
+
+        nav ul ul li:hover {
+            background-color: #fff; /* Thay đổi màu nền khi rê chuột vào các mục trong submenu */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li>
+                <a href="#">Đào tạo</a>
+                <ul class="submenu">
+                    <li><a href="#">Chuyên trang đào tạo</a></li>
+                    <li><a href="#">Đào tạo quốc tế</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Tuyển sinh</a>
+                <ul class="submenu">
+                    <li><a href="#">Tuyển sinh Đại Học</a></li>
+                    <li><a href="#">Tuyển sinh chương trình liên kết</a></li>
+                    <li><a href="#">Tuyển sinh trình độ Tiến Sĩ-Thạc Sĩ</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Dịch vụ</a>
+                <ul class="submenu">
+                    <li><a href="#">Học online</a></li>
+                    <li><a href="#">Phòng học chất lượng cao</a></li>
+                    <li><a href="#">Combo học trực tuyến</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Nghiên cứu</a></li>
+            <li><a href="#">Sinh viên</a></li>
+            <li><a href="#">Giảng viên</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
